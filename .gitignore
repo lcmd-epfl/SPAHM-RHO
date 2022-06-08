@@ -1,2 +1,5 @@
 *.sw?
 *.pyc
+
+*.molden
+*.cube
