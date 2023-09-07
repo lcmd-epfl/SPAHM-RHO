@@ -15,7 +15,11 @@ This repo is a collection of scripts which allow to reproduce the results presen
 * [`QML-toolkit >= 0.4`](https://www.qmlcode.org/) (optional, for comparison with aSLATM, see [`get_aSLATM.py`](get_aSLATM.py))
 
 ## Usage
-See [workflow.md](workflow.md) for scripts to reproduce the results of the paper.
+<!-- See [workflow.md](workflow.md) for scripts to reproduce the results of the paper. !-->
+
+SPAHM(a,b) can be computed either from command line or from a python script.
+Below we show how to use the CLI.
+Examples how to use the module are provided in [`get_SPAHM-ab.py`](get_SPAHM-ab.py).
 
 ### Compute SPAHM(a) representations
 
