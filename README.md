@@ -145,6 +145,27 @@ usage: bond.py [-h] --mol FILENAME --name NAME_OUT [--guess GUESS] [--units UNIT
 ```
 </details>
 
+### Compute SPAHM(b) representations for selected bonds
+
+The SPAHM(b) representation can be generated also for specific bonds.
+
+For example, representations for the C–O bond of ethanol radical cation and C–N bond of methylamine radical anion
+are computed as follows:
+```
+python -m qstack.spahm.rho.bond_selected --mol mol/set2.inp --dir out/ \
+                                         --omod alpha beta --charge mol/set1_charge.dat --spin mol/set1_spin.dat \
+                                         --guess lb
+```
+The input file contains paths to the xyz files as well as indices (base 1) of atoms forming the bond of interest.
+<details><summary>(file content)</summary>
+
+```
+==> mol/set2.inp <==
+mol/C2H5OH.xyz   2 3
+mol/CH3NH2.xyz   1 2
+```
+</details>
+
 ### Hyperparameter search and regression
 (Under construction)
 
