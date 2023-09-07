@@ -1,0 +1,14 @@
+$control
+task=optimize
+theory=qm_n3
+basis=qm.in
+$end
+
+
+$molecule
+ z-matrix
+   1
+  17    1    1.28348823
+$end
+ Energy =   -460.2857583545
+

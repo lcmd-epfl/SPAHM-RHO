@@ -1,0 +1,300 @@
+Priroda 19 (2019.06.13)
+copyright (c) Dimitri N. Laikov
+
+ date: Tue Jan  3 14:31:05 2023
+
+ node   0: 'lcmdlc3.epfl.ch'
+
+ Memory: 256m + 512m (256m + 512m)
+
+
+ molecule input: ''
+ 3 atoms, 10 electrons
+<$molecule
+< cartesian
+<   8    -0.00000000  -0.40278303   0.00000000
+<   1     0.75933003   0.20139151   0.00000000
+<   1    -0.75933003   0.20139151   0.00000000
+<$end
+
+ Atomic Coordinates:
+   8    -0.00000000  -0.40278303   0.00000000
+   1     0.75933003   0.20139151   0.00000000
+   1    -0.75933003   0.20139151   0.00000000
+ #
+  formula: H2O
+  internuclear distances:
+  O1    |  H1   : 0.97037  H2   : 0.97037
+  H1    |  O1   : 0.97037
+  H2    |  O1   : 0.97037
+     largest =    1.51866
+
+ atom   8 core =  1
+ at.d.=0
+
+ Basis set input: '/home/briling/kh/basis/b2n.in'
+    1   8  O :  14 /  43 : { 3, 2, 1}                          / {12, 7, 2}                          log2(a) =  -3.02, +16.35
+    2   1  H :   5 /  12 : { 2, 1}                             / { 6, 2}                             log2(a) =  -3.51,  +6.66
+    3   1  H :   5 /  12 : { 2, 1}                             / { 6, 2}                             log2(a) =  -3.51,  +6.66
+
+ Basis set input: '/home/briling/kh/basis/b2n.in'
+    1   8  O :  30 /  50 : { 4, 3, 2, 1}                       / { 6, 5, 3, 2}                       log2(a) =  -0.74,  +8.15
+    2   1  H :   5 /   6 : { 2, 1}                             / { 3, 1}                             log2(a) =  -1.65,  +1.82
+    3   1  H :   5 /   6 : { 2, 1}                             / { 3, 1}                             log2(a) =  -1.65,  +1.82
+
+ +---------------------------------------
+ | Number of atoms                      3
+ | Charge of molecule                   0
+ | Spin multiplicity                    1
+ | Number of alpha electrons            5
+ | Number of beta  electrons            5
+ | Number of core  electrons            1
+ | Theoretical Method                 DFT
+ | Approximation to E(xc)             PBE
+ | Dimension of wavefunction basis     24
+ | Dimension of   auxiliary  basis     40
+ | Hamiltonian: non-relativistic
+ +---------------------------------------
+
+ scf: conv = 1.0e-06, 1.0e-03; iter=32,16; xmax = 0.25000; 0s; n1=12
+ cut-off for S,T,V integrals: 1.0e-10 (1.0e-06)
+ inv=2: v = 9.5e-07
+ d0 = 7.6e-06, 6.1e-05
+
+ grid: accuracy=1.0e-08,1.0e-05, cut=1.0e-10,1.0e-07, t=-1
+ atom    nr
+    1    56
+    8    64
+  mol   176
+
+ ANALYTICAL COMPUTATION OF SECOND DERIVATIVES
+
+
+ Initial Guess (2)
+ time: atomic calculations              :     0.0  99.9%     0.0
+ time: Initial Guess                    :     0.0 100.0%     0.0
+
+ SCF
+ time: One-Electron Integrals           :     0.0  99.8%     0.0
+ time: Inversion of V-Matrix            :     0.0  99.8%     0.0
+ time: Orthogonalize                    :     0.0  95.0%     0.0
+
+  it          E            dE            g          x               t
+ grid:     9460
+   0       -76.3486469307  0.0000000000 0.06907673                 0.1
+       1                                0.02232099 0.04910942      0.0
+       2                                0.00166157 0.05694881      0.1
+   1       -76.3712972783 -0.0226503476 0.00426450                 0.1
+       1                                0.00195555 0.00622523      0.0
+       2                                0.00015074 0.00831067      0.1
+       3                                0.00002904 0.00829746      0.1
+       4                                0.00000187 0.00829072      0.1
+ grid:    28552
+   2       -76.3711648735  0.0001324048 0.00097522                 0.4
+       1                                0.00010399 0.00032269      0.0
+       2                                0.00003590 0.00027120      0.1
+       3                                0.00000870 0.00027751      0.1
+       4                                0.00000018 0.00027337      0.1
+   3       -76.3711667982 -0.0000019247 0.00000020                 0.5
+ converged!
+ time: Coulomb-type Integrals           :     0.0 100.0%     0.0
+ time: Grid Construction                :     0.1 100.0%     0.1
+ time: Numerical Integration            :     0.5 100.0%     0.5
+ time: Diagonalize                      :     0.0 100.0%     0.0
+ time: Matrix Multiply                  :     0.0 100.0%     0.0
+ time: Rotate                           :     0.0  99.7%     0.0
+ time: SCF Equations                    :     0.5 100.0%     0.5
+   4 F,   10 F1
+
+  E  =     -76.3711667982
+  T  =      76.01428972  V  =    -198.99790101  J  =      46.80599989
+  Ex =      -8.93651621  Ec =      -0.33089948
+
+  dipole =   0.763072 au (  1.939551 D)
+
+ One-Electron Energies (alpha)
+ occupied:
+   1   -18.733079    2    -0.904475    3    -0.459393    4    -0.315452
+   5    -0.235839
+ virtual:
+   6     0.048763    7     0.140526    8     0.625378    9     0.701376
+  10     0.753210   11     0.838857   12     0.850718   13     1.172757
+ time: One-Electron Gradient            :     0.0 100.0%     0.0
+ time: Coulomb-type Gradient            :     0.0 100.0%     0.0
+ time: Ex. - Corr.  Gradient            :     0.1 100.0%     0.1
+
+ -----------------------------------------
+ ANALYTIC SECOND DERIVATIVES OF SCF ENERGY
+ -----------------------------------------
+ time: One-Electron 2nd Derivatives     :     0.0 100.0%     0.0
+ time: Coulomb-type 2nd Derivatives     :     0.0 100.0%     0.0
+ time: Ex. - Corr.  2nd Derivatives     :     0.2 100.0%     0.2
+ time: Coulomb-type 1st Derivatives     :     0.0 100.0%     0.0
+ time: Ex. - Corr.  Response            :     0.2 100.0%     0.2
+ time: Ex. - Corr.  1st Derivatives     :     0.1 100.0%     0.1
+ time: One-Electron 1st Derivatives     :     0.0 100.0%     0.0
+ time: Coulomb-type 1st Derivatives     :     0.0 100.0%     0.0
+ time: Coulomb-type Integrals           :     0.0 100.0%     0.0
+ time: Matrix Multiply                  :     0.0 100.0%     0.0
+ time: Coulomb-type Integrals           :     0.0 100.0%     0.0
+ time: Matrix Multiply                  :     0.0 100.0%     0.0
+ Solving for responses   1 -   9
+ iter =  0  N =   6  rmax = 0.15245894
+ iter =  1  N =  12  rmax = 0.00967302
+ iter =  2  N =  18  rmax = 0.00025881
+ converged!
+ Solving for responses  10 -  12
+ iter =  0  N =   3  rmax = 0.72061698
+ iter =  1  N =   6  rmax = 0.12530359
+ iter =  2  N =   9  rmax = 0.01870735
+ iter =  3  N =  11  rmax = 0.00081093
+ converged!
+ time: Coulomb-type Integrals           :     0.0 100.0%     0.0
+ time: Matrix Multiply                  :     0.0 100.0%     0.0
+.
+ time: Dot Products                     :     0.0  96.6%     0.0
+ time: ANALYTIC SECOND DERIVATIVES      :     0.7  94.4%     0.7
+
+
+eng>$Energy
+eng> E=-7.6371166798188e+01
+eng> D=-6.49327814e-13  7.63072301e-01 -8.26696945e-13
+eng> A=-7.82969070e+00
+eng>    4.09526969e-12 -6.22773588e+00
+eng>   -1.70444257e-12  7.89883730e-13 -3.83882484e+00
+eng> G= 1.85161267e-13  8.88162382e-07 -3.90354055e-13
+eng>    1.05947173e-06 -4.44081289e-07  1.91580977e-13
+eng>   -1.05947191e-06 -4.44081095e-07  1.98772136e-13
+eng> Dx=-4.02548139e-01 -2.61889023e-12 -9.03398601e-13
+eng>    -2.88539630e-12 -2.99731088e-01 -7.02871224e-13
+eng>    -7.29613788e-13 -1.88460661e-12 -6.68318339e-01
+eng>     2.01274070e-01 -9.74485396e-02  1.17454319e-12
+eng>    -1.05755268e-01  1.49865544e-01  2.73531402e-13
+eng>     1.31218681e-12  1.12935352e-12  3.34159169e-01
+eng>     2.01274070e-01  9.74485396e-02 -2.71124828e-13
+eng>     1.05755268e-01  1.49865544e-01  4.29319561e-13
+eng>    -5.82555011e-13  7.55263250e-13  3.34159169e-01
+eng> H= 6.42940536e-01  6.74954969e-13  4.48006178e-01  9.31230298e-14  8.05499562e-14  3.38319618e-06
+eng>   -3.21470268e-01 -1.94813744e-01 -4.28232664e-13  3.54633527e-01 -2.55815167e-01 -2.24003089e-01
+eng>    4.96685560e-15  2.25314455e-01  2.13755992e-01 -1.78976237e-13 -1.87760609e-14 -1.69159809e-06
+eng>    3.13635886e-13 -1.12912087e-14  9.13650884e-06 -3.21470268e-01  1.94813744e-01  3.35117252e-13
+eng>   -3.31632595e-02  3.05007115e-02 -1.34666570e-13  3.54633527e-01  2.55815167e-01 -2.24003089e-01
+eng>   -8.55206085e-14 -3.05007115e-02  1.02470970e-02  3.00721094e-14 -2.25314455e-01  2.13755992e-01
+eng>    8.58588386e-14 -6.17821700e-14 -1.69159861e-06  1.14596607e-13  6.32989032e-15 -7.44491075e-06
+eng>   -2.00454038e-13  5.54575680e-14  9.13650936e-06
+eng>$end
+
+ G(max) = 0.00000115  |G| = 0.00000185
+
+ Dipole Polarizability:
+     7.829691
+    -0.000000     6.227736
+     0.000000    -0.000000     3.838825
+
+ ========================================
+ VIBRATIONAL ANALYSIS and THERMOCHEMISTRY
+ ========================================
+
+  Atomic Masses (amu)
+   1    O   15.994910
+   2    H    1.007825
+   3    H    1.007825
+
+ Tensor of Inertia (amu*bohr*bohr)
+     2.3334     0.0000     0.0000
+     0.0000     4.1502     0.0000
+     0.0000     0.0000     6.4837
+         Principal Moments
+     2.3334     4.1502     6.4837
+
+ Dipole and Polarizability Derivatives:
+ mode   1, freq=1639.51 
+  dipole:
+   Dx= 0.0000000 Dy= 0.0061372 Dz=-0.0000000
+ mode   2, freq=3755.36 
+  dipole:
+   Dx=-0.0000000 Dy=-0.0004748 Dz=-0.0000000
+ mode   3, freq=3851.76 
+  dipole:
+   Dx= 0.0035458 Dy= 0.0000000 Dz= 0.0000000
+
+ Harmonic Frequencies (cm^-1), Reduced Masses (amu),
+ IR Intensities (km/mol),
+ Raman Scattering Activities (A^4/amu),
+ Raman Depolarization Ratios,
+ Raman Optical Activities (10^-4)
+ *------*---------*--------*---------*---------*--------*-----------*-----------*
+ | Mode | Freq.   | Mass.  | IR Int. |Raman A. |Raman D.| ROA (90)  | ROA (180) |
+ *------*---------*--------*---------*---------*--------*-----------*-----------*
+ |    1 | 1639.51 |   1.08 |  66.899 |   0.000 | 0.0000 |   0.00000 |   0.00000 |
+ |    2 | 3755.36 |   1.05 |   0.400 |   0.000 | 0.0000 |   0.00000 |   0.00000 |
+ |    3 | 3851.76 |   1.08 |  22.330 |   0.000 | 0.0000 |   0.00000 |   0.00000 |
+ *------*---------*--------*---------*---------*--------*-----------*-----------*
+
+ ====================================================
+ Normal Modes (mass-weighted) and Frequencies (cm^-1)
+ ====================================================
+
+ mode         1         2         3  
+ freq.   1639.5    3755.4    3851.8  
+
+   1 x   0.000000 -0.000000 -0.267652
+   1 y  -0.270910  0.196273 -0.000000
+   1 z   0.000000  0.000000  0.000000
+   2 x  -0.414859 -0.572618  0.533137
+   2 y   0.539626 -0.390956  0.424200
+   2 z   0.000000  0.000000  0.000000
+   3 x   0.414859  0.572618  0.533137
+   3 y   0.539626 -0.390956 -0.424200
+   3 z   0.000000  0.000000  0.000000
+
+ E =   -76.371167    E0 =   -76.350101
+
+ ZPVE = 0.021065 a.u. =   13.2187 kcal/mol
+
+ ----------------------------------------------------------------------
+ T =  298.150 K      ln(Q)       S          U          H          G
+                              cal/mol*K  kcal/mol   kcal/mol   kcal/mol
+ ----------------------------------------------------------------------
+ translational      14.9147    34.6068     0.8887     1.4812    -8.8368
+ rotational          4.4956    11.9146     0.8887     0.8887    -2.6636
+ vibrational         0.0004     0.0065    13.2204    13.2204    13.2185
+ total              19.4107    46.5279    14.9979    15.5904     1.7181
+ ----------------------------------------------------------------------
+
+ ============================================================
+
+ Memory used =     7754 KB
+  Disk  used =    16412 KB,          1058 KB written,         2777 KB read
+
+ CPU  time =    1.42 sec =  0.02 min = 0.00 hr =   97.52%
+ REAL time =    1.46 sec =  0.02 min = 0.00 hr
+ ratio     =   97.52%
+
+ date: Tue Jan  3 14:31:07 2023
+
+ time: Initial Guess                    :     0.0 100.0%     0.0
+ time: atomic calculations              :     0.0  99.9%     0.0
+ time: One-Electron Integrals           :     0.0 100.0%     0.0
+ time: Coulomb-type Integrals           :     0.1 100.0%     0.1
+ time: Diagonalize                      :     0.0 100.0%     0.0
+ time: Matrix Multiply                  :     0.0 100.0%     0.0
+ time: SCF Equations                    :     0.5 100.0%     0.5
+ time: Inversion of V-Matrix            :     0.0  99.8%     0.0
+ time: Orthogonalize                    :     0.0  95.0%     0.0
+ time: Grid Construction                :     0.1 100.0%     0.1
+ time: Numerical Integration            :     0.5 100.0%     0.5
+ time: Rotate                           :     0.0  99.7%     0.0
+ time: scf x                            :     0.3 100.0%     0.3
+ time: One-Electron Gradient            :     0.0 100.0%     0.0
+ time: Coulomb-type Gradient            :     0.0 100.0%     0.0
+ time: Ex. - Corr.  Gradient            :     0.1 100.0%     0.1
+ time: ANALYTIC SECOND DERIVATIVES      :     0.7  94.4%     0.7
+ time: One-Electron 2nd Derivatives     :     0.0 100.0%     0.0
+ time: Coulomb-type 2nd Derivatives     :     0.0 100.0%     0.0
+ time: Ex. - Corr.  2nd Derivatives     :     0.2 100.0%     0.2
+ time: Coulomb-type 1st Derivatives     :     0.0 100.0%     0.0
+ time: Ex. - Corr.  Response            :     0.2 100.0%     0.2
+ time: Ex. - Corr.  1st Derivatives     :     0.1 100.0%     0.1
+ time: One-Electron 1st Derivatives     :     0.0 100.0%     0.0
+ time: Dot Products                     :     0.0  96.6%     0.0

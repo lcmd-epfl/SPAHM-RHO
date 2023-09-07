@@ -1,0 +1,337 @@
+Priroda 19 (2019.06.13)
+copyright (c) Dimitri N. Laikov
+
+ date: Tue Jan  3 14:27:19 2023
+
+ node   0: 'lcmdlc3.epfl.ch'
+
+ Memory: 256m + 512m (256m + 512m)
+
+
+ molecule input: ''
+ 3 atoms, 10 electrons
+<$molecule
+< cartesian
+<   8     0.00000000  -0.41111360   0.00000000
+<   1     0.78722145   0.20555680   0.00000000
+<   1    -0.78722145   0.20555680   0.00000000
+<$end
+
+ Atomic Coordinates:
+   8     0.00000000  -0.41111360   0.00000000
+   1     0.78722145   0.20555680   0.00000000
+   1    -0.78722145   0.20555680   0.00000000
+ #
+  formula: H2O
+  internuclear distances:
+  O1    |  H1   : 1.00000  H2   : 1.00000
+  H1    |  O1   : 1.00000
+  H2    |  O1   : 1.00000
+     largest =    1.57444
+
+
+ qm file: '/home/briling/kh/basis/qm.in'
+
+ Geometry optimization options:
+ Coordinates: internal
+ Tolerance on gradient       = 0.00010000
+ Tolerance on displacement   = 0.01000000
+ Trust radius                = 0.20000000 (max), 0.01250000 (min)
+ Maximum number of steps     =        128
+ Updated hessian used
+
+ Geometry Optimization Step 0:
+     9 cartesian,    3 internal coordinates
+     3 independent variables
+ time: Geometry Optimization            :     0.0   4.1%     0.0
+
+ SCF: No=4,4 N=6 N1=17
+ time: H                                :     0.0   5.0%     0.0
+ time: R                                :     0.0   5.5%     0.0
+it= 0: E= -76.2173706285 g=0.1055926733 x=0.1191580763
+it= 1: E= -76.2728604421 g=0.0420098740 x=0.0770153231
+it= 2: E= -76.2817173260 g=0.0040210807 x=0.0049550144
+it= 3: E= -76.2817832888 g=0.0010169830 x=0.0016306398
+it= 4: E= -76.2817881396 g=0.0002669745 x=0.0005733402
+it= 5: E= -76.2817885039 g=0.0000551494 x=0.0000356886
+it= 6: E= -76.2817885088 g=0.0000062793 x=0.0000042818
+it= 7: E= -76.2817885089 g=0.0000001350 x=0.0000002745
+it= 8: E= -76.2817885089 g=0.0000000078 x=0.0000000125
+it= 9: E= -76.2817885089 g=0.0000000002 x=0.0000000004
+converged!
+it=10: E= -76.2817885089 g=0.0000000000
+ e: -0.45377  0.29733
+ time: J                                :     0.0  99.1%     0.0
+ time: K                                :     0.0 100.0%     0.0
+ time: SCF                              :     0.0  28.0%     0.0
+ time: Hx                               :     0.0  99.7%     0.0
+ time: Rx                               :     0.0  99.6%     0.0
+ gmax = 0.03711602
+ time: Energy                           :     0.0  17.7%     0.0
+
+ Geometry Optimization Step 1:
+ Energy:           -76.28178851
+     9 cartesian,    3 internal coordinates
+     3 independent variables
+ include g
+ max. gradient     = 0.0325759 (internal), 0.0371160 (cartesian)
+ Lagrangian multiplier =   0.156436
+ max. displacement = 0.0500000 (internal), 0.0465824 (cartesian)
+ iter   0: rmax = 0.0500000000, xmax = 0.0465824227
+ iter   1: rmax = 0.0003366601, xmax = 0.0001771605
+ iter   2: rmax = 0.0000000261, xmax = 0.0000000243
+ iter   3: rmax = 0.0000000000, xmax = 0.0000000000
+ max. displacement = 0.0500000 (internal), 0.0464191 (cartesian)
+mol>$molecule
+mol> z-matrix
+mol>   8
+mol>   1    1    0.97354114
+mol>   1    1    0.97354114    2    103.143110
+mol>$end
+
+ Atomic Coordinates:
+   8     0.00000000  -0.40339441   0.00000000
+   1     0.76265751   0.20169721   0.00000000
+   1    -0.76265751   0.20169721   0.00000000
+ #
+
+ time: Geometry Optimization            :     0.0   4.7%     0.0
+
+ SCF: No=4,4 N=6 N1=17
+ time: H                                :     0.0  99.5%     0.0
+ time: R                                :     0.0  99.5%     0.0
+it= 0: E= -76.2838475214 g=0.0103847238 x=0.0059409423
+it= 1: E= -76.2840418074 g=0.0015305544 x=0.0022415643
+it= 2: E= -76.2840530803 g=0.0003581648 x=0.0005859569
+it= 3: E= -76.2840537189 g=0.0001649791 x=0.0001915897
+it= 4: E= -76.2840537930 g=0.0000136874 x=0.0000088024
+it= 5: E= -76.2840537933 g=0.0000014199 x=0.0000016853
+it= 6: E= -76.2840537933 g=0.0000004119 x=0.0000005976
+it= 7: E= -76.2840537933 g=0.0000000626 x=0.0000000556
+it= 8: E= -76.2840537933 g=0.0000000061 x=0.0000000048
+converged!
+it= 9: E= -76.2840537933 g=0.0000000002
+ e: -0.45692  0.30965
+ time: J                                :     0.0 100.0%     0.0
+ time: K                                :     0.0  97.5%     0.0
+ time: SCF                              :     0.0 100.0%     0.0
+ time: Hx                               :     0.0  99.6%     0.0
+ time: Rx                               :     0.0  99.7%     0.0
+ gmax = 0.01484002
+ time: Energy                           :     0.0  29.2%     0.1
+
+ Geometry Optimization Step 2:
+ Energy:           -76.28405379
+ Energy change:     -0.00226528 (actual)
+                    -0.00204866 (predicted)
+     9 cartesian,    3 internal coordinates
+     3 independent variables
+ Hessian update: |dG| = 0.030155, |dG - HdX| = 0.00544245
+ include g
+ max. gradient     = 0.0114761 (internal), 0.0148400 (cartesian)
+ trust test =-0.1429339, trust radius = 0.0707107
+ max. displacement = 0.0277820 (internal), 0.0174066 (cartesian)
+ iter   0: rmax = 0.0277820373, xmax = 0.0174066201
+ iter   1: rmax = 0.0001168192, xmax = 0.0000761169
+ iter   2: rmax = 0.0000000031, xmax = 0.0000000019
+ iter   3: rmax = 0.0000000000, xmax = 0.0000000000
+ max. displacement = 0.0277820 (internal), 0.0174827 (cartesian)
+mol>$molecule
+mol> z-matrix
+mol>   8
+mol>   1    1    0.95883952
+mol>   1    1    0.95883952    2    103.579788
+mol>$end
+
+ Atomic Coordinates:
+   8    -0.00000000  -0.39539154   0.00000000
+   1     0.75340604   0.19769577   0.00000000
+   1    -0.75340604   0.19769577   0.00000000
+ #
+
+ time: Geometry Optimization            :     0.0   6.2%     0.0
+
+ SCF: No=4,4 N=6 N1=17
+ time: H                                :     0.0  99.0%     0.0
+ time: R                                :     0.0  99.3%     0.0
+it= 0: E= -76.2842252227 g=0.0056069627 x=0.0043413644
+it= 1: E= -76.2843111277 g=0.0014806785 x=0.0024825761
+it= 2: E= -76.2843206185 g=0.0003450769 x=0.0004498520
+it= 3: E= -76.2843210443 g=0.0001351416 x=0.0000883525
+it= 4: E= -76.2843210757 g=0.0000076993 x=0.0000050703
+it= 5: E= -76.2843210759 g=0.0000016516 x=0.0000021397
+it= 6: E= -76.2843210759 g=0.0000003114 x=0.0000004567
+it= 7: E= -76.2843210759 g=0.0000000487 x=0.0000000451
+it= 8: E= -76.2843210759 g=0.0000000028 x=0.0000000025
+converged!
+it= 9: E= -76.2843210759 g=0.0000000001
+ e: -0.45860  0.31801
+ time: J                                :     0.0  99.6%     0.0
+ time: K                                :     0.0  99.5%     0.0
+ time: SCF                              :     0.0  99.9%     0.0
+ time: Hx                               :     0.0  99.7%     0.0
+ time: Rx                               :     0.0  99.7%     0.0
+ gmax = 0.00219989
+ time: Energy                           :     0.0  37.4%     0.1
+
+ Geometry Optimization Step 3:
+ Energy:           -76.28432108
+ Energy change:     -0.00026728 (actual)
+                    -0.00032140 (predicted)
+     9 cartesian,    3 internal coordinates
+     3 independent variables
+ Hessian update: |dG| = 0.030155, |dG - HdX| = 0.00000484
+ Hessian update: |dG| = 0.019635, |dG - HdX| = 0.00352488
+ include g
+ max. gradient     = 0.0024070 (internal), 0.0021999 (cartesian)
+ trust test = 0.2066491, trust radius = 0.0392897
+ max. displacement = 0.0045455 (internal), 0.0051364 (cartesian)
+ iter   0: rmax = 0.0045455086, xmax = 0.0051364005
+ iter   1: rmax = 0.0000069892, xmax = 0.0000040540
+ iter   2: rmax = 0.0000000000, xmax = 0.0000000000
+ max. displacement = 0.0045455 (internal), 0.0051389 (cartesian)
+mol>$molecule
+mol> z-matrix
+mol>   8
+mol>   1    1    0.96124490
+mol>   1    1    0.96124490    2    103.739776
+mol>$end
+
+ Atomic Coordinates:
+   8     0.00000000  -0.39568004   0.00000000
+   1     0.75612545   0.19784002   0.00000000
+   1    -0.75612545   0.19784002   0.00000000
+ #
+
+ time: Geometry Optimization            :     0.0   7.6%     0.0
+
+ SCF: No=4,4 N=6 N1=17
+ time: H                                :     0.0  99.5%     0.0
+ time: R                                :     0.0  99.8%     0.0
+it= 0: E= -76.2843317132 g=0.0009978705 x=0.0005644889
+it= 1: E= -76.2843331213 g=0.0001549116 x=0.0001054208
+it= 2: E= -76.2843331617 g=0.0000113469 x=0.0000143980
+it= 3: E= -76.2843331623 g=0.0000044588 x=0.0000092855
+it= 4: E= -76.2843331624 g=0.0000002209 x=0.0000002125
+it= 5: E= -76.2843331624 g=0.0000000901 x=0.0000001401
+it= 6: E= -76.2843331624 g=0.0000000037 x=0.0000000023
+converged!
+it= 7: E= -76.2843331624 g=0.0000000003
+ e: -0.45828  0.31704
+ time: J                                :     0.0  98.0%     0.0
+ time: K                                :     0.0 100.0%     0.0
+ time: SCF                              :     0.0  99.9%     0.0
+ time: Hx                               :     0.0  99.6%     0.0
+ time: Rx                               :     0.0  99.6%     0.0
+ gmax = 0.00036448
+ time: Energy                           :     0.0  43.4%     0.1
+
+ Geometry Optimization Step 4:
+ Energy:           -76.28433316
+ Energy change:     -0.00001209 (actual)
+                    -0.00001220 (predicted)
+     9 cartesian,    3 internal coordinates
+     3 independent variables
+ Hessian update: |dG| = 0.019635, |dG - HdX| = 0.00000362
+ Hessian update: |dG| = 0.003602, |dG - HdX| = 0.00031101
+ include g
+ max. gradient     = 0.0002764 (internal), 0.0003645 (cartesian)
+ trust test = 0.0193583, trust radius = 0.0125000
+ max. displacement = 0.0014208 (internal), 0.0007622 (cartesian)
+ iter   0: rmax = 0.0014208338, xmax = 0.0007621686
+ iter   1: rmax = 0.0000004584, xmax = 0.0000004516
+ iter   2: rmax = 0.0000000000, xmax = 0.0000000000
+ max. displacement = 0.0014208 (internal), 0.0007623 (cartesian)
+mol>$molecule
+mol> z-matrix
+mol>   8
+mol>   1    1    0.96113506
+mol>   1    1    0.96113506    2    103.821183
+mol>$end
+
+ Atomic Coordinates:
+   8     0.00000000  -0.39527665   0.00000000
+   1     0.75646046   0.19763833   0.00000000
+   1    -0.75646046   0.19763833   0.00000000
+ #
+
+ time: Geometry Optimization            :     0.0   8.8%     0.0
+
+ SCF: No=4,4 N=6 N1=17
+ time: H                                :     0.0  99.4%     0.0
+ time: R                                :     0.0  98.9%     0.0
+it= 0: E= -76.2843333090 g=0.0001729371 x=0.0002019295
+it= 1: E= -76.2843334158 g=0.0000753564 x=0.0001558596
+it= 2: E= -76.2843334407 g=0.0000034688 x=0.0000019614
+it= 3: E= -76.2843334407 g=0.0000006986 x=0.0000008787
+it= 4: E= -76.2843334407 g=0.0000000993 x=0.0000001257
+it= 5: E= -76.2843334407 g=0.0000000286 x=0.0000000262
+it= 6: E= -76.2843334407 g=0.0000000008 x=0.0000000006
+converged!
+it= 7: E= -76.2843334407 g=0.0000000000
+ e: -0.45828  0.31724
+ time: J                                :     0.0  98.1%     0.0
+ time: K                                :     0.0 100.0%     0.0
+ time: SCF                              :     0.0 100.0%     0.0
+ time: Hx                               :     0.0  99.1%     0.0
+ time: Rx                               :     0.0  99.5%     0.0
+ gmax = 0.00009920
+ time: Energy                           :     0.0  48.2%     0.1
+
+ Geometry Optimization Step 5:
+ Energy:           -76.28433344
+ Energy change:     -0.00000028 (actual)
+                    -0.00000022 (predicted)
+     9 cartesian,    3 internal coordinates
+     3 independent variables
+ Hessian update: |dG| = 0.003602, |dG - HdX| = 0.00000027
+ Hessian update: |dG| = 0.000225, |dG - HdX| = 0.00008615
+ include g
+ max. gradient     = 0.0000783 (internal), 0.0000992 (cartesian)
+ trust test =-0.2764501, trust radius = 0.0125000
+ max. displacement = 0.0005590 (internal), 0.0002965 (cartesian)
+ iter   0: rmax = 0.0005590188, xmax = 0.0002965068
+ iter   1: rmax = 0.0000000710, xmax = 0.0000000685
+ iter   2: rmax = 0.0000000000, xmax = 0.0000000000
+ max. displacement = 0.0005590 (internal), 0.0002965 (cartesian)
+ OPTIMIZATION CONVERGED in 4 steps!
+MOL>$molecule
+MOL> z-matrix
+MOL>   8
+MOL>   1    1    0.96113506
+MOL>   1    1    0.96113506    2    103.821183
+MOL>$end
+MOL> Energy =    -76.2843334407
+
+ Atomic Coordinates:
+   8     0.00000000  -0.39527665   0.00000000
+   1     0.75646046   0.19763833   0.00000000
+   1    -0.75646046   0.19763833   0.00000000
+ #
+
+ time: Geometry Optimization            :     0.0   9.8%     0.0
+
+ ============================================================
+
+ Memory used =    21929 KB
+  Disk  used =    21876 KB,         21874 KB written,       109286 KB read
+
+ CPU  time =    0.22 sec =  0.00 min = 0.00 hr =   58.90%
+ REAL time =    0.37 sec =  0.01 min = 0.00 hr
+ ratio     =   58.90%
+
+ date: Tue Jan  3 14:27:20 2023
+
+ time: Geometry Optimization            :     0.0   9.8%     0.0
+ time: Energy                           :     0.0  48.2%     0.1
+ time: H                                :     0.0   8.0%     0.0
+ time: R                                :     0.0  13.7%     0.0
+ time: J                                :     0.0  99.6%     0.0
+ time: K                                :     0.0 100.0%     0.0
+ time: SCF                              :     0.0  58.0%     0.0
+ time: Matrix Multiply                  :     0.0 100.0%     0.0
+ time: Diagonalize                      :     0.0 100.0%     0.0
+ time: Rotate                           :     0.0 100.0%     0.0
+ time: Hx                               :     0.0  99.8%     0.0
+ time: Rx                               :     0.0  99.9%     0.0
+ time: Orthogonalize                    :     0.0  94.4%     0.0
