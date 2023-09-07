@@ -5,7 +5,10 @@ This code supports the paper
 > “SPAHM(a,b): encoding the density information from guess Hamiltonian in quantum machine learning representations”<br>
 > [arXiv:2309.02950 [physics.chem-ph]](https://doi.org/10.48550/arXiv.2309.02950)<br>
 
-This is a collection of scripts which allow to reproduce the results presented in the paper.
+The SPAHM(a) and SPAHM(b) representations are integrated to
+[`Q-stack`](https://github.com/lcmd-epfl/Q-stack/tree/local-spahm).
+
+This repo is a collection of scripts which allow to reproduce the results presented in the paper.
 
 ## Requirements
 * [`qstack@local-spahm`](https://github.com/lcmd-epfl/Q-stack/tree/local-spahm)
@@ -19,7 +22,7 @@ See [workflow.md](workflow.md) for scripts to reproduce the results of the paper
 
 The SPAHM(a) representation can be generated separately for each molecule.
 
-For example, the following line computes SPAHM(a) 
+For example, the following line computes SPAHM(a)
 with the [LB guess](https://doi.org/10.1007/s00214-019-2521-3) and the best-performing *long* Löwdin-population-analysis-based model
 for ethanol radical cation concatenating α and β representations and saving the output to `out/C2H5OH_atom_alpha_beta.npy`:
 ```
@@ -56,7 +59,7 @@ usage: atom.py [-h] --mol MOL [--guess GUESS] [--units UNITS] [--basis-set BASIS
 
 ### Compute SPAHM(b) representations
 
-The SPAHM(b) representation can be generated separately for each molecule as well. 
+The SPAHM(b) representation can be generated separately for each molecule as well.
 For example, the SPAHM(b) counterpart of the atom-based representation above is computed with
 ```
 python -m qstack.spahm.rho.bond --mol mol/C2H5OH.xyz --name out/C2H5OH_bond \
@@ -100,7 +103,7 @@ paste mol/set1.inp mol/set1_charge.dat mol/set1_spin.dat | while read MOL CHARGE
     python -m qstack.spahm.rho.bond --mol ${MOL} --name out/set1_$(basename ${MOL/.xyz/})_bond \
                                     --omod alpha beta --charge ${CHARGE} --spin ${SPIN} \
                                     --guess lb \
-                                    --pairfile out/set1_pairs.npy     
+                                    --pairfile out/set1_pairs.npy
 done
 ```
 
