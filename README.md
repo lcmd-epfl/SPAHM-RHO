@@ -12,7 +12,7 @@ This repo is a collection of scripts which allow to reproduce the results presen
 
 ## Requirements
 * [`qstack@local-spahm`](https://github.com/lcmd-epfl/Q-stack/tree/local-spahm)
-* [`QML-toolkit >= 0.4`](https://www.qmlcode.org/) (optional, for comparison with aSLATM)
+* [`QML-toolkit >= 0.4`](https://www.qmlcode.org/) (optional, for comparison with aSLATM, see [`get_aSLATM.py`](get_aSLATM.py))
 
 ## Usage
 See [workflow.md](workflow.md) for scripts to reproduce the results of the paper.

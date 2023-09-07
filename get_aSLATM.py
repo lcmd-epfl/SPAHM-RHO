@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# module purge; module load intel/19.0.4 anaconda/5.2.0/python-3.6
+
 import os
 import numpy as np
 import argparse
