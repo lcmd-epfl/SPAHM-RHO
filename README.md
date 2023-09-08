@@ -238,6 +238,7 @@ options:
 </details>
 Once the output has been generated, the optimized parameters can be extract from the last line to perform the final regression using the 
 approtiate Q-satck module as (using the ouput from the previous example):
+
 ```
 python -m qstack.regression.regression  --x out/set1_bond_alpha_beta.npy \
                                         --y mol/y_set1.txt \
@@ -245,6 +246,7 @@ python -m qstack.regression.regression  --x out/set1_bond_alpha_beta.npy \
                                         --eta 1.000000e-10 \
                                         --sigma 1.000000e+00
 ```
+
 The output is a table containing all training-set sizes averaged over 5 randomly shuffled runs (training set).
 <details><summary>(output extract)</summary>
 size    MAE             STD
