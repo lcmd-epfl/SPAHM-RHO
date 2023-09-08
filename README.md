@@ -167,7 +167,124 @@ mol/CH3NH2.xyz   1 2
 </details>
 
 ### Hyperparameter search and regression
-(Under construction)
+Hyperparameters cross-validated grid-search was used to find the optimal parameters of the KRR model. It can be performed using the corresponding Q-stack module.
+Where the numbers of split for cross-validation and the grid values can be specified using the `--splits`, `--eta` and `--sigma`
+parameters respectivley. Currently 3 kernel functions are avaiable for kernel generation: Gaussian, Laplacian and linear. The desired one can 
+be selected through the `--kernel` parameter (default: Laplacian).
+
+For example searching the `eta` and `sigma` parameters minimizing the mean absolute error (MAE) with respect to the toy-properties found in 
+`./mol/y_set1.txt` using a Laplacian kernel is done by running:
+```
+python -m qstack.regression.hyperparameters --x out/set1_bond_alpha_beta.npy \
+                                            --y mol/y_set1.txt \
+                                            --akernel L
+```
+The output displays the list with all tested `eta` and `sigma` values with the corresponding MAE and standard-variations in invrese order 
+(from highest to lowest MAE value).
+
+<details><summary>(output content)</summary>
+
+```
+error        stdev          eta          sigma
+5.178182e+00 1.393084e+00 | 1.000000e+00 1.000000e+06
+5.178182e+00 1.393083e+00 | 1.000000e+00 3.162278e+05
+    ...         ...             ...         ...
+3.451178e+00 1.545717e+00 | 3.162278e-08 1.000000e+02
+3.450524e+00 1.510564e+00 | 1.000000e-05 1.000000e+01
+3.450092e+00 1.550506e+00 | 1.000000e-10 1.000000e+04
+3.449305e+00 1.552126e+00 | 1.000000e-10 3.162278e+03
+3.448982e+00 1.552641e+00 | 1.000000e-10 1.000000e+03
+3.448697e+00 1.552728e+00 | 1.000000e-10 3.162278e+02
+3.448032e+00 1.552502e+00 | 1.000000e-10 1.000000e+02
+3.447143e+00 1.549218e+00 | 3.162278e-08 3.162278e+01
+3.446003e+00 1.551632e+00 | 1.000000e-10 3.162278e+01
+3.439973e+00 1.548043e+00 | 3.162278e-08 1.000000e+01
+3.439598e+00 1.548834e+00 | 1.000000e-10 1.000000e+01
+3.429671e+00 1.512283e+00 | 1.000000e-05 3.162278e+00
+3.419343e+00 1.539770e+00 | 3.162278e-08 3.162278e+00
+3.419226e+00 1.540019e+00 | 1.000000e-10 3.162278e+00
+3.359772e+00 1.498204e+00 | 1.000000e-05 1.000000e+00
+3.353693e+00 1.512606e+00 | 3.162278e-08 1.000000e+00
+3.353659e+00 1.512681e+00 | 1.000000e-10 1.000000e+00
+
+```
+</details>
+<details><summary><b>Full reference</b></summary>
+
+```
+usage: hyperparameters.py [-h] --x REPR --y PROP [--test TEST_SIZE] [--akernel AKERNEL] [--gkernel GKERNEL] [--gdict [GDICT ...]] [--splits SPLITS] [--print PRINTLEVEL]
+                          [--eta ETA [ETA ...]] [--sigma SIGMA [SIGMA ...]] [--ll] [--ada] [--readkernel]
+
+This program finds the optimal hyperparameters.
+
+options:
+  -h, --help            show this help message and exit
+  --x REPR              path to the representations file
+  --y PROP              path to the properties file
+  --test TEST_SIZE      test set fraction (default=0.2)
+  --akernel AKERNEL     local kernel type (G for Gaussian, L for Laplacian, myL for Laplacian for open-shell systems) (default L)
+  --gkernel GKERNEL     global kernel type (avg for average kernel, rem for REMatch kernel) (default )
+  --gdict [GDICT ...]   dictionary like input string to initialize global kernel parameters
+  --splits SPLITS       k in k-fold cross validation (default=5)
+  --print PRINTLEVEL    printlevel
+  --eta ETA [ETA ...]   eta array
+  --sigma SIGMA [SIGMA ...]
+                        sigma array
+  --ll                  if correct for the numper of threads
+  --ada                 if adapt sigma
+  --readkernel          if X is kernel
+
+```
+</details>
+Once the output has been generated, the optimized parameters can be extract from the last line to perform the final regression using the 
+approtiate Q-satck module as (using the ouput from the previous example):
+```
+python -m qstack.regression.regression  --x out/set1_bond_alpha_beta.npy \
+                                        --y mol/y_set1.txt \
+                                        --akernel L \
+                                        --eta 1.000000e-10 \
+                                        --sigma 1.000000e+00
+```
+The output is a table containing all training-set sizes averaged over 5 randomly shuffled runs (training set).
+<details><summary>(output extract)</summary>
+size    MAE             STD
+```
+1	4.109106e+00	1.125572e+00
+3	4.140986e+00	1.258406e+00
+6	2.546631e+00	8.568210e-01
+9	1.737456e+00	4.872807e-01
+12	2.436564e+00	1.763576e-12
+
+```
+</details>
+
+<details><summary><b>Full reference</b></summary>
+
+```
+usage: regression.py [-h] --x REPR --y PROP [--test TEST_SIZE] [--eta ETA] [--sigma SIGMA] [--akernel AKERNEL] [--gkernel GKERNEL] [--gdict [GDICT ...]] [--splits SPLITS]
+                     [--train TRAIN_SIZE [TRAIN_SIZE ...]] [--debug] [--ll] [--readkernel]
+
+This program computes the learning curve.
+
+options:
+  -h, --help            show this help message and exit
+  --x REPR              path to the representations file
+  --y PROP              path to the properties file
+  --test TEST_SIZE      test set fraction (default=0.2)
+  --eta ETA             eta hyperparameter (default=1e-05)
+  --sigma SIGMA         sigma hyperparameter (default=32.0)
+  --akernel AKERNEL     local kernel type (G for Gaussian, L for Laplacian, myL for Laplacian for open-shell systems) (default L)
+  --gkernel GKERNEL     global kernel type (avg for average kernel, rem for REMatch kernel) (default None)
+  --gdict [GDICT ...]   dictionary like input string to initialize global kernel parameters
+  --splits SPLITS       number of splits (default=5)
+  --train TRAIN_SIZE [TRAIN_SIZE ...]
+                        training set fractions
+  --debug               enable debug
+  --ll                  if correct for the numper of threads
+  --readkernel          if X is kernel
+
+```
+</details>
 
 ### Basis set optimization
 (Under construction)
