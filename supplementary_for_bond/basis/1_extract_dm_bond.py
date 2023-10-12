@@ -2,7 +2,7 @@
 import sys
 import numpy as np
 from pyscf import dft,df,tools
-import pyscf_ext
+import qstack
 
 basis  = 'minao'
 
@@ -19,7 +19,7 @@ def mysqrtm(m):
   sm1 = b @ np.diag(1.0/e) @ b.T
   return (sm+sm.T)*0.5, (sm1+sm1.T)*0.5
 
-mol = pyscf_ext.readmol(molfile, basis, charge=charge, spin=spin)
+mol = qstack.compound.xyz_to_mol(molfile, basis, charge=charge, spin=spin)
 
 mf = dft.RKS(mol)
 mf.xc = 'pbe'
