@@ -291,4 +291,39 @@ options:
 </details>
 
 ### Basis set optimization
-(Under construction)
+The basis functions used to fit the bond-density between two atoms to a set of single atom-centered expansion coefficients (where the single atom is fictiously placed at 
+at the middle of the bond are optimized according to atom-type with the following procedure:
+1. We build a set, for the desired pair of atoms, composed of several structures containing this specific bond with optimized geometries (high-level of theory). We generate the density-matrix 
+associated with the selected bond, using Lowdin formalism and the molecular density-matrix evaluated at the single point PBE level of theory.
+2. We project the obtained density-matrix onto a grid in real space and fix a fictious Nobelium atom at the middle of the selected bond.
+3. We perform a basis-set optimization procedure, as implemented in Q-stack, on the fictious atom, starting from any basis-set file (`*.bas`). 
+
+All the necessary scripts are located at `/supplementary_for_bond/basis`.
+
+`1_extract_dm_bond.py` takes as input a single molecular structure file, the total charge and spin of the compound and the indices attributed to the atoms involved in the bond. 
+The script saves the associated bond-density matrix to a `.npy` file.
+```
+1_extract_dm_bond.py $PATH_TO_XYZ $CHARGE $SPIN $INT_1 $INT_2
+```
+For conveniance we provide a bash-script to extract the bond-density of various structures: `1_extract_dm_bond.bash`. This script takes a list of structures with associated
+charges and spins and the pair of the atom indices defining the selected bond gather in a text-file named `xyz.dat` (fixed name).
+<details><summary><b>Example</b></summary>
+
+```
+# mol charge spin a1 a2
+CH4.xyz        0 0       1 2
+CO.xyz         0 0       1 2
+H2CCH2.xyz     0 0       1 4
+H2CNH.xyz      0 0       1 4
+```
+</details>
+
+`2_generate_rho.py` script takes as input the bond-density matrices generated using `1_extract_dm_bond.py`, the basis-set used to project the density-matrix (i.e. minao) 
+and again the pair of indices defining the bond.
+```
+./2_generate_rho.py $PATH_TO_XYZ $BOND_DM minao $OUTPUT_NAME $INT_1 $INT_2
+```
+`2_generate_rho.bash` provides a script to automatically re-use the afro-mentioned `xyz.dat` file, following the output filenames as implemented in `1_extract_dm_bond.py`.
+
+Finally `3_optimizer.py` script is a wrapper to gather all the projected bond-densities associated with a given  bond-type and an initial basis function file to be optimized. 
+The script uses the Q-stack package for the fitting procedure. 
