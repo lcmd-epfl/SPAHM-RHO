@@ -325,5 +325,10 @@ and again the pair of indices defining the bond.
 ```
 `2_generate_rho.bash` provides a script to automatically re-use the afro-mentioned `xyz.dat` file, following the output filenames as implemented in `1_extract_dm_bond.py`.
 
-Finally `3_optimizer.py` script is a wrapper to gather all the projected bond-densities associated with a given  bond-type and an initial basis function file to be optimized. 
-The script uses the Q-stack package for the fitting procedure. 
+Finally `3_optimizer.py` script is a wrapper to gather all the projected bond-densities associated with a given  bond-type and an initial basis function (*.bas) to be optimized. 
+The script uses the Q-stack package for the fitting procedure.
+
+**All optimized basis can be found at `supplementary_for_bond/basis_opt/`**
+
+**Alternative optimized basis functions (s orbitals only) can be found at `supplementary_for_bond/basis_test_s`**
+*The folder `supplementary_for_bond/numerical/` provdies tools for to numerically test the averaging around the z-axis, please refer to the `README.bash` file for procedure.
