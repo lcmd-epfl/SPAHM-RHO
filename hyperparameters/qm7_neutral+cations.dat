@@ -1,0 +1,11 @@
+element  representation  property  eta           sigma         kernel
+C        atom            charge    1.000000E-10  3.162278E+00  G
+C        bond            charge    1.000000E-10  3.162278E-02  G
+H        atom            charge    3.162278E-08  3.162278E-05  G
+H        bond            charge    3.162278E-08  1.000000E-04  G
+N        atom            charge    1.000000E-10  3.162278E+01  G
+N        bond            charge    1.000000E-05  1.000000E-03  G
+O        atom            charge    1.000000E-10  3.162278E+01  G
+O        bond            charge    3.162278E-03  3.162278E+00  L
+S        atom            charge    1.000000E-10  3.162278E+03  G
+S        bond            charge    1.000000E-05  1.000000E+02  L
