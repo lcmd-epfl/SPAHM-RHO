@@ -6,12 +6,12 @@ This code supports the paper
 > [arXiv:2309.02950 [physics.chem-ph]](https://doi.org/10.48550/arXiv.2309.02950)<br>
 
 The SPAHM(a) and SPAHM(b) representations are integrated to
-[`Q-stack`](https://github.com/lcmd-epfl/Q-stack/tree/local-spahm).
+[`Q-stack`](https://github.com/lcmd-epfl/Q-stack).
 
 This repo is a collection of scripts which allow to reproduce the results presented in the paper.
 
 ## Requirements
-* [`qstack@local-spahm`](https://github.com/lcmd-epfl/Q-stack/tree/local-spahm)
+* [`qstack`](https://github.com/lcmd-epfl/Q-stack)
 * [`QML-toolkit >= 0.4`](https://www.qmlcode.org/) (optional, for comparison with aSLATM, see [`get_aSLATM.py`](get_aSLATM.py))
 
 ## Usage
