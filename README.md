@@ -3,7 +3,7 @@
 This code supports the paper
 >  K. R. Briling, Y. Calvino Alonso, A. Fabrizio, and C. Corminboeuf,<br>
 > “SPAHM(a,b): encoding the density information from guess Hamiltonian in quantum machine learning representations”<br>
-> [arXiv:2309.02950 [physics.chem-ph]](https://doi.org/10.48550/arXiv.2309.02950)<br>
+> [J. Chem. Theory Comput. 2024, 20, 1108−1117](https://doi.org/10.1021/acs.jctc.3c01040)<br>
 
 The SPAHM(a) and SPAHM(b) representations are integrated to
 [`Q-stack`](https://github.com/lcmd-epfl/Q-stack).
